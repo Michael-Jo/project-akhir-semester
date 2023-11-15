@@ -6,21 +6,37 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-image: radial-gradient(white, black);
 }
 
 .vertical {
-    height: 400px;
-    width: 100px;
+    height: 60vh;
+    width: 10vh;
+    border-radius: 5vh;
 }
 
 .horizontal {
-    height: 100px;
-    width: 400px;
+    height: 10vh;
+    width: 60vh;
+    border-radius: 5vh;
 }
 
 a {
     font-style: normal;
     text-decoration: none;
+}
+
+section {
+    position: fixed;
+    left: 10px;
+    bottom: 7.5px;
+    height: 12.5vh;
+    width: calc(100vw - 20px);
+    border-radius: 5vh;
+    display: flex;
+    justify-content: center; /* Penengah Horizontal */
+    align-items: center;
+    background-color: black;
 }
 
 .back {
@@ -30,10 +46,16 @@ a {
     height: 10vh;
     width: 30vh;
     border-radius: 5vh;
-    line-height: 10vh;
-    align-items: center;
+    display: flex;
+    justify-content: center; /* Penengah Horizontal */
+    align-items: center; /* Penengah Vertikal */
     background-color: red;
     color: white;
+}
+
+.back:hover {
+    background-color: white;
+    color: red;
 }
 
 .next {
@@ -43,40 +65,64 @@ a {
     height: 10vh;
     width: 30vh;
     border-radius: 5vh;
-    line-height: 10vh;
-    align-items: center;
+    display: flex;
+    justify-content: center; /* Penengah Horizontal */
+    align-items: center; /* Penengah Vertikal */
     background-color: blue;
     color: white;
 }
 
-.vertical-1 {
-    background-color: blue;
+.next:hover {
+    background-color: white;
+    color: blue;
 }
 
-.vertical-2 {
+.vertical.n1 {
+    background-color: blue;
+    margin-top: 20vh;
+    margin-left: 100vh;
+    /* align-items: center; */
+}
+
+.vertical.n2 {
+    display: none;
     background-color: red;
+    margin-top: -50vh;
+    margin-left: 125vh;
 }
 
-.vertical-3 {
+.vertical.n3 {
     background-color: blue;
+    margin-top: 20vh;
+    margin-left: 50vh;
 }
 
-.vertical-4 {
+.vertical.n4 {
     background-color: orange;
+    margin-top: -75vh;
+    margin-left: 125vh;
 }
 
-.vertical-5 {
+.vertical.n5 {
     background-color: blue;
+    margin-top: 20vh;
+    margin-left: 70vh;
 }
 
-.vertical-6 {
+.vertical.n6 {
     background-color: limegreen;
+    margin-top: -60vh;
+    margin-left: 115vh;
 }
 
-.vertical-7 {
+.vertical.n7 {
     background-color: blue;
+    margin-top: 20vh;
+    margin-left: 80vh;
 }
 
 .horizontal {
     background-color: pink;
+    margin-top: -20vh;
+    margin-left: 100vh;
 }

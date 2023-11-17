@@ -1,22 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-    //definer
-    function toggleHide() {
+    function toggleDarkMode() {
         const body = document.body;
-        body.classList.toggle('hide');
+        body.classList.toggle('dark');
 
-        const isHidden = body.classList.contains('hide');
-        document.cookie = `hideMode=${isHidden};`
+        const isDarkMode = body.classList.contains('dark');
+        document.cookie = `darkMode=${isDarkMode};`
     }
-    // Web ask cookie for true/false then add hide if true
+
     window.addEventListener('load', () => {
         const cookie = document.cookie;
-        if (cookie.includes('hideMode=true')) {
-        document.body.classList.add('hide');
+        if (cookie.includes('darkMode=true')) {
+        document.body.classList.add('dark');
         }
     });
 
-    //trigger
-    document.querySelector(".org").addEventListener('click', () => {
-        document.getElementsByClassName('.target').toggleHide(); // doesn't work even helped by Chat GPT
-    });
+    document.querySelector(".btn").addEventListener('click', () => {
+        document.getElementById('dark-mode-icon').toggleDarkMode(); // doesn't work
+    })
 })

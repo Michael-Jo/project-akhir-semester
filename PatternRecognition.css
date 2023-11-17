@@ -6,7 +6,8 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: radial-gradient(white, black);
+    /* background-color: black; */
+    background-image: radial-gradient(white, gray, black);
     width: 100vw;
     height: 80vh;
 }
@@ -26,6 +27,7 @@ body {
 a {
     font-style: normal;
     text-decoration: none;
+    /* opacity: 0; */
 }
 
 a:hover {
